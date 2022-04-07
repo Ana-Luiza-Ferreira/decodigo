@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./estilo.css" />
+    <title>DECODIGO</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="font1">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap" rel="font2">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap" rel="font3">
+
+  </head>
+
+  <body>
+    <main>
+      <form>
+        <h1 id="titu">De-Código</h1>
+        <br />
+        <fieldset id="tipoDeCodigo">
+          <label>Você deseja: <br /></label>
+          <input type="radio" name="option" value="codificar" class="codOuDecod" checked/>
+          Codificar
+          <input type="radio" name="option" value="decodificar" class="codOuDecod"/>
+          Decodificar<br /><br />
+        </fieldset>
+
+        <fieldset>
+          <label>Escolha o método.<br /></label>
+          <select name="metodo" id="escolhaMetodo">
+            <option value="" disabled selected>--</option>
+            <option value="cifraDeCesar">Cifra de César</option>
+            <option value="base64">Base 64</option>
+          </select>
+        </fieldset>
+
+        <fieldset id="selecionePasso">
+          <label for="passo"
+            ><br />Selecione o quão secreto será (de 1 a 25).<br
+          /></label>
+          <input type="number" id="passo" name="numPasso" value="1" max="25" />
+        </fieldset>
+
+        <fieldset>
+          <label for="mensagem"><br />Escreva a mensagem:<br /></label>
+          <textarea 
+          id="texto" 
+          name="mensagem" 
+          rows="3" 
+          cols="48"
+          placeholder="Digite aqui"></textarea>
+        </fieldset>
+
+        <fieldset>
+          <textarea ]
+          id="resultadoMensagem" 
+          name="resultado" 
+          rows="3" cols="48" 
+          readonly> </textarea>
+        </fieldset>
+
+        <button type="button" id="botao">Codificar</button>
+      </form>
+    </main>
+   
+    <script src="./codigo.js"></script>
+  </body>
+</html>
